@@ -7,12 +7,14 @@ from decimal import Decimal
 class Recipe(models.Model):
     name = models.CharField(max_length=100, blank=True, null=True)
     ingredients = models.ManyToManyField('Ingredient')
-    categories = models.CharField(max_length=50)
-    description = models.TextField()
-    instructions = models.ManyToManyField('Instruction')
+    categories = models.CharField(max_length=50, blank=True, null=True)
+    description = models.TextField(default="No description has been entered yet")
+    instructions = models.TextField("No instructions have been added yet")
+    video = models.CharField(max_length=200, blank=True, null=True)
     price = models.FloatField(default=0)
     rating = models.FloatField(default=0)
     time = models.FloatField(default=0)
+    photo = models.CharField(max_length=200, blank=True, null=True)
 
     def __unicode__(self):
         return self.name
@@ -20,14 +22,6 @@ class Recipe(models.Model):
 class Ingredient(models.Model):
     name = models.CharField(max_length=50)
     brand = models.CharField(max_length=100, default=0)
-
-    def __unicode__(self):
-        return self.name
-
-class Instruction(models.Model):
-    name = models.CharField(max_length=100)
-    instruction = models.TextField()
-    video = models.URLField()
 
     def __unicode__(self):
         return self.name

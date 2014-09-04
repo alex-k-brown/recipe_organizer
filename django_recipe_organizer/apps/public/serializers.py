@@ -13,11 +13,6 @@ class IngredientSerializer(serializers.ModelSerializer):
         model = Ingredient
 
 
-class PreparationSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Instruction
-
-
 class TakeoutSerializer(serializers.ModelSerializer):
     class Meta:
         model = Takeout
