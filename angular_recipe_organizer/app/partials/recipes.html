@@ -1,9 +1,70 @@
-<div class="container">
+<!-- start intro section -->
+<section class="intro">
+	<div class="container">
+		<!--<div class="row">-->
+
+			<div class="col-md-12 text-center" style="margin-top: 2em">
+				<div class="intro-content">
+                    <img src = "images/make_it_a_meal.png" width = 250 em >
+					<h1 style="color: #c4d7ee; font-size: 6em">MealTime</h1>
+					<h2 style="color: #fff799">Let's get cookin'</h2>
+
+
+				</div>
+			</div>
+		<!--</div>-->
+	</div>
+</section>
+<!-- end intro section -->
+
+<!-- begin portfolio section -->
+
+<section class="portfolio">
+
+    <div class="container"><input type="text" ng-model="searchTerm"><h4 style="color: #c4d7ee; font-size: 1em">Search by Name, Category, or Ingredients </h4></div>
+
+    <br>
+
+	<div class="container">
+
+			<div ng-repeat="recipe in recipes |filter: searchTerm" class="col-xs-12 col-sm-6 col-md-4">
+
+				<article class="block-thumbnail">
+					<a href= "#/recipes/{{ recipe.id }}" class="block-thumb">
+						<div class="block-image">
+							<div class="overlay">
+
+								<div class="icon">
+									<i class="fa fa-bars"></i>
+
+								</div>
+							</div>
+
+                            <img src="{{ recipe.photo }}" alt="portfolio item">
+						</div>
+					</a>
+
+					<div class="block-data">
+						<h3>
+							<a href="#">{{ recipe.name }}</a>
+						</h3>
+						<span class="block-category" style="color: #7accc8">{{ recipe.description }}</span>
+                        <a href="#/edit-recipe/{{ recipe.id }}">
+                        <button class="btn btn-xs btn-info edit-button" style="background-color: #7accc8">Edit</button>
+                        </a>
+					</div>
+				</article>
+
+			</div>
+	</div>
+</section>
+
+<!-- <div class="container">
     <div ng-repeat="recipe in recipes">
 
     <h2>{{recipe.name}}</h2>
 
-    <img src="{{ recipe.photo }}" width="350px">
+    <a href="recipes/{{ recipes.id }}"><img src="{{ recipe.photo }}" width="350px"></a>
 
     <p>{{recipe.description}}</p>
     <ul>
@@ -11,7 +72,7 @@
     </ul>
 
 </div>
-    </div>
+    </div> -->
 
 
 

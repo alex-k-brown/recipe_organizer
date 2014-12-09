@@ -1,4 +1,5 @@
 /* HTML 5 reset & Bootstrap fixes */
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -28,6 +29,7 @@ body {
     letter-spacing: -0.01em;
     overflow-x: hidden;
     position: relative;
+
 }
 
 article,aside,details,figcaption,figure,
@@ -99,8 +101,8 @@ select:focus {
 .btn-border:hover,
 .btn-slide:hover {
     color: #fff;
-    background: #09F;
-    border-color: #09F;
+    background: #7accc8;
+    border-color: #7accc8;
 }
 
 .btn-noborder {
@@ -208,7 +210,7 @@ p {
     margin-left: -25px;
     height: 50px;
     width: 50px;
-    background-color: #09F;
+    background-color: #7accc8;
     border-radius: 2px;
     display: block;
     opacity: 0;
@@ -257,7 +259,7 @@ p {
     color: #fff;
 }
 .block-thumbnail .block-data h3 a:hover {
-    color: #09F;
+    color: #7accc8;
 }
 
 .block-thumbnail .block-data span.block-category,
@@ -343,12 +345,12 @@ span.feature {
 }
 
 .nav>li>a {
-    color: #999;
+    color: #c4d7ee;
     font-weight: 800;
 }
 
 .nav>li>a:hover {
-    background: #09F;
+    background: #7accc8;
     color: #fff;
 }
 
@@ -358,7 +360,7 @@ span.feature {
 
 .nav>li.active>a,
 .nav>li.active>a:hover {
-    background: #09F;
+    background: #7accc8;
     color: #fff;
 }
 
@@ -368,7 +370,7 @@ span.feature {
 
 nav ul.nav-main li.dropdown:hover a.dropdown-toggle,
 .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
-    background: #09F;
+    background: #7accc8;
     color: #fff;
 }
 
@@ -398,14 +400,14 @@ nav ul.nav-main li.dropdown:hover a.dropdown-toggle,
 }
 
 .navbar-toggle {
-    background: #09F;
+    background: #7accc8;
     color: #fff;
     border:none;
     font-weight: 900;
 }
 .navbar-default .navbar-toggle:hover, 
 .navbar-default .navbar-toggle:focus{
-    background: #09F;
+    background: #7accc8;
 }
 .navbar-collapse {
     box-shadow: none;
@@ -424,7 +426,7 @@ nav ul.nav-main li.dropdown:hover a.dropdown-toggle,
 }
 
 .navbar-brand .fa {
-    color: #09F;
+    color: #7accc8;
     font-size: 32px;
 }
 
@@ -513,8 +515,8 @@ nav ul.nav-main li.dropdown:hover a.dropdown-toggle,
     color: #fff;
 }
 .portfolio-controls a:hover {
-    background: #09F;
-    border-color: #09F;
+    background: #7accc8;
+    border-color: #7accc8;
 }
 
 .portfolio-controls a.prev {
@@ -550,7 +552,7 @@ nav ul.nav-main li.dropdown:hover a.dropdown-toggle,
     margin-right: 5px;
 }
 .portfolio .portfolio-single .btn:hover {
-    border-color: #09F;
+    border-color: #7accc8;
 }
 
 .portfolio .portfolio-single.fullwidth {
@@ -611,7 +613,7 @@ nav ul.nav-main li.dropdown:hover a.dropdown-toggle,
 }
 
 .services .service:hover .fa {
-    color: #09F;
+    color: #7accc8;
 }
 
 .services .service h3 {
@@ -645,7 +647,7 @@ nav ul.nav-main li.dropdown:hover a.dropdown-toggle,
     top: -5px;
 }
     .calltoaction .btn:hover {
-        border: 1px solid #09F;
+        border: 1px solid #7accc8;
     }
 /* End Calltoaction Section */
 
@@ -680,7 +682,7 @@ nav ul.nav-main li.dropdown:hover a.dropdown-toggle,
     color: #fff;
 }
 .popular-posts li a:hover .fa {
-    color: #09F;
+    color: #7accc8;
 }
 
 .popular-posts li:last-child a {
@@ -726,12 +728,12 @@ span.comment {
     border-color: #666;
 }
 .footer .btn-border:hover {
-    border-color: #09F;
+    border-color: #7accc8;
 }
 
 .footer .footeritem form .btn.submit:hover {
-    background: #09F;
-    border-color: #09F;
+    background: #7accc8;
+    border-color: #7accc8;
 }
 
 #message,
@@ -797,8 +799,8 @@ span.comment {
     top: 3px;
 }
 .block-thumbnail .overlay .block-social .fa:hover {
-    background: #09F;
-    border-color: #09F;
+    background: #7accc8;
+    border-color: #7accc8;
 }
 .block-thumbnail .overlay .block-social .fa.fa-facebook:hover {
     background: #3b5998;
@@ -1083,5 +1085,21 @@ textarea {
     color: #999;
 }
 .sidebar .social li a:hover {
-    color: #09F;
+    color: #7accc8;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.teal .active a,
+.teal .active a:hover {
+    background-color: #7accc8;
+}
+
+.navopacity {
+   background-color: #585858;
+    opacity: .80;
 }

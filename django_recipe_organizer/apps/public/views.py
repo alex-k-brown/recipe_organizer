@@ -5,7 +5,7 @@ from rest_framework import generics
 
 # Create your views here.
 
-class RecipeList(generics.ListAPIView):
+class RecipeList(generics.ListCreateAPIView):
     model = Recipe
     serializer_class = RecipeSerializer
     queryset = Recipe.objects.all()
@@ -22,6 +22,11 @@ class TakeoutList(generics.ListAPIView):
     queryset = Takeout.objects.all()
 
 class AddRecipe(generics.CreateAPIView):
+    model = Recipe
+    serializer_class = RecipeSerializer
+    queryset = Recipe.objects.all()
+
+class RecipeDetail(generics.RetrieveUpdateDestroyAPIView):
     model = Recipe
     serializer_class = RecipeSerializer
     queryset = Recipe.objects.all()

@@ -19,7 +19,7 @@
     .btn-border:hover, 
     .btn-slide:hover,
     .nav>li>a:hover {
-        background-color: #09F;
+        background-color: #7accc8;
     }
 
     /* Navigation dropdown background color
@@ -41,7 +41,7 @@
     .popular-posts li a:hover .fa,
     .sidebar .social li a:hover,
     .block-thumbnail .block-data h3 a:hover {
-        color: #09F;
+        color: #7accc8;
     }
 
 
@@ -54,5 +54,5 @@
     .btn-border:hover, 
     .btn-slide:hover,
     .calltoaction .btn:hover {
-        border-color: #09F;
+        border-color: #7accc8;
     }

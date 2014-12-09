@@ -12,7 +12,7 @@ angular.module('myApp', [
 
 
     ]).
-    config(['$routeProvider', 'RestangularProvider', function ($routeProvider, RestangularProvider) {
+    config(['$routeProvider', '$sceDelegateProvider', 'RestangularProvider', function ($routeProvider, $sceDelegateProvider, RestangularProvider) {
         $routeProvider
             .when('/recipes', {
                 templateUrl: 'partials/recipes.html',
@@ -26,11 +26,26 @@ angular.module('myApp', [
                 title: 'Add a Recipe'
             })
 
+            .when('/recipes/:id', {
+                templateUrl: 'partials/recipe-detail.html',
+                controller: 'RecipeDetailsCtrl',
+                title: 'Recipe Details'
+            })
+
+            .when('/edit-recipe/:recipeId', {
+                templateUrl: 'partials/edit-recipe.html',
+                controller: 'EditRecipeCtrl',
+                title: 'Edit Recipe'
+            })
+
             .otherwise({
                 redirectTo: '/recipes'
             });
 
+        $sceDelegateProvider.resourceUrlWhitelist(['self', new RegExp('^(http[s]?):\/\/(w{3}.)?youtube.com/.+$')]);
+
         RestangularProvider.setBaseUrl('http://localhost:8001');
-    }]);
+
+    }])
 
 

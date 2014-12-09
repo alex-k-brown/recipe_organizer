@@ -1,42 +1,76 @@
-<ul>
+<ul style="padding-top: 8em">
     <div class="container">
-    <h1>Add a New Recipe</h1>
+    <h1 style="color: #fff799">Add a New Recipe</h1>
 
-    <div class="form-group, col-lg-6">
-        <label>Name</label>
+    <div class="form-group col-lg-6">
+        <label style="color: #c4d7ee">Name</label>
         <input ng-model="recipe.name"
                class="form-control">
     </div>
 
-    <div class="form-group, col-lg-6">
-        <label>Ingredients</label>
-        <input ng-model="recipe.ingredients"
-               class="form-control">
-    </div>
-
-    <div class="form-group, col-lg-6, col-lg-6">
-        <label>Description</label>
+    <div class="form-group col-lg-6 col-lg-6">
+        <label style="color: #c4d7ee">Description</label>
         <input ng-model="recipe.description"
                class="form-control">
     </div>
 
     <div class="form-group, col-lg-6">
-        <label>Instructions</label>
+        <label style="color: #c4d7ee">Category</label>
+        <input ng-model="recipe.categories"
+               class="form-control">
+    </div>
+
+    <div class="form-group, col-lg-6">
+        <label style="color: #c4d7ee">Time (mins)</label>
+        <input ng-model="recipe.time"
+               class="form-control">
+    </div>
+
+    <div class="form-group, col-lg-6">
+        <label style="color: #c4d7ee">Price ($)</label>
+        <input ng-model="recipe.price"
+               class="form-control">
+    </div>
+
+    <div class="form-group, col-lg-6">
+        <label style="color: #c4d7ee">Rating</label>
+        <input ng-model="recipe.rating"
+               class="form-control">
+    </div>
+
+    <div class="form-group col-lg-6">
+        <label style="color: #c4d7ee">Instructions</label>
         <input ng-model="recipe.instructions"
                class="form-control">
     </div>
 
     <div class="form-group, col-lg-6">
-        <label>Rating</label>
-        <input ng-model="recipe.rating"
+        <label style="color: #c4d7ee">Photo (url)</label>
+        <input ng-model="recipe.photo"
                class="form-control">
     </div>
 
     <div class="form-group, col-lg-6">
-        <label>Photo (url)</label>
-        <input ng-model="recipe.photo"
+        <label style="color: #c4d7ee">Video URL (YouTube)</label>
+        <input ng-model="recipe.video"
                class="form-control">
     </div>
+
+        <div class="form-group col-lg-6" ng-class="{'has-error':(createNewIngredient && newIngredient.$error)}">
+        <label style="color: #c4d7ee">Ingredients</label>
+            <select size="5" multiple ng-model="recipe.ingredients" ng-options="ingredient.id as ingredient.name for ingredient in ingredients | orderBy:'name' | filter: searchTerm" ng-hide="createNewIngredient" class="form-control"></select>
+            <button class="btn btn-default" ng-click="addIngredient()" ng-hide="createNewIngredient">
+                <span class="glyphicon glyphicon-plus"></span>
+            </button>
+            <input type="text" ng-model="newIngredient.name" class="form-control" ng-show="createNewIngredient">
+            <div class="ingredient-buttons" ng-show="createNewIngredient">
+                <button class="btn btn-primary" ng-click="saveIngredient(newIngredient.name)">Add</button>
+                <button class="btn btn-danger" ng-click="cancelIngredient()">cancel</button>
+                <span ng-show="createNewIngredient && newIngredient.$error" class="alert alert-danger" role="alert">Ingredient already exists</span>
+            </div>
+            <input type="text" ng-model="searchTerm">
+        <!-- <input ng-model="recipe.ingredients"
+               class="form-control"> -->
 
     <button class="btn btn-primary"
             ng-click="addRecipe()">

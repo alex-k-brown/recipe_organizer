@@ -21,7 +21,6 @@ class Recipe(models.Model):
 
 class Ingredient(models.Model):
     name = models.CharField(max_length=50)
-    brand = models.CharField(max_length=100, default=0)
 
     def __unicode__(self):
         return self.name
